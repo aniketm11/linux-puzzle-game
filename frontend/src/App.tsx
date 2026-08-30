@@ -17,7 +17,6 @@ function App() {
 
   return (
     <div className="app-shell">
-
       {page === "home" && (
         <Home
           onStart={() => setPage("categories")}
@@ -38,7 +37,6 @@ function App() {
           onCategories={() => setPage("categories")}
         />
       )}
-
     </div>
   );
 }
