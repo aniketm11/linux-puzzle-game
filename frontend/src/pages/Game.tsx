@@ -4,6 +4,8 @@ import PuzzlePanel from "../components/PuzzlePanel";
 import Terminal from "../components/Terminal";
 import ResultScreen from "../components/ResultScreen";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 type GameProps = {
   category: string;
   onCategories: () => void;
@@ -135,7 +137,7 @@ function Game({
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:5000/api/generate-puzzle",
+        `${API_URL}/api/generate-puzzle`,
         {
           method: "POST",
 
@@ -228,7 +230,7 @@ function Game({
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:5000/api/check",
+        `${API_URL}/api/check`,
         {
           method: "POST",
 
